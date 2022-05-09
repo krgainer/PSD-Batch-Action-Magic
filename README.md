@@ -1,9 +1,8 @@
 # PSD-Batch-Action-Magic
-Take an input CSV file (setup in the mannor of the example.csv) and iteratively make images of each row, utilizing the data of the collumns as variable data, to be placed in the PSD. An example psd is also provided. 
+Take an input CSV file (setup in the mannor of the example.csv) and iteratively make images of each row, utilizing the data of the collumns as variable data, to be placed in the PSD. An example psd is also provided.
 
+Conceptual Graph:
 ![Conceptual Graph](/docs/ConceptualGraphBase.png)
 
-
-
-
-Notes for example.csv:
+Current Graph:
+![Conceptual Graph](/docs/CurrentGraphBase.png)
