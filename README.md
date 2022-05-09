@@ -5,4 +5,4 @@ Conceptual Graph:
 ![Conceptual Graph](/docs/ConceptualGraphBase.png)
 
 Current Graph:
-![Conceptual Graph](/docs/CurrentGraphBase.png)
+![Current Graph](/docs/CurrentGraphBase.png)
