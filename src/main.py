@@ -9,6 +9,8 @@ import os
 import subprocess
 import sys
 from tkinter import *
+import csv
+
 
 userPlatform = sys.platform()
 slash = "\\" if userPlatform == "Windows" else "/"
@@ -23,8 +25,13 @@ def main():
     master.geometry("280x500")
     master.title("PSD Bulk Actioner")
 
+def read_CSV(File):
+	with open(File, 'r') as file:
+    	csv_file = csv.DictReader(file)
+    	for row in csv_file:
+        	print(dict(row))
 
-def openFile(filename):
+def open_file(filename):
 	if userPlatform == "Windows":
 		try:
 			os.startfile(filename)
