@@ -1,35 +1,35 @@
 # Created by Kieran Gainer (github.com/krgainer)
-
-from win32com.client import Dispatch
 import webbrowser
-import PIL
-from PIL import Image
 import tkinter as tk
 import os
 import subprocess
 import sys
+import platform
 from tkinter import *
 import csv
+# from win32com.client import Dispatch
 
-
-userPlatform = sys.platform()
+userPlatform = platform.system()
 slash = "\\" if userPlatform == "Windows" else "/"
 
 def main():
-    global master
-    master = Tk()
-    master.tk.call("source", "sun-valley.tcl")
-    master.tk.call("set_theme", "dark")
-    # screen_width = master.winfo_screenwidth()
-    # screen_height = master.winfo_screenheight()
-    master.geometry("280x500")
-    master.title("PSD Bulk Actioner")
+	global master
+	master = Tk()
+	master.tk.call("source", "sun-valley.tcl")
+	master.tk.call("set_theme", "dark")
+	# screen_width = master.winfo_screenwidth()
+	# screen_height = master.winfo_screenheight()
+	master.geometry("280x500")
+	master.title("PSD Bulk Actioner")
+	master.iconbitmap("icon.ico")
+	PSDFileEntry = ttk.Entry(master, textvariable="")
+	PSDFileEntry.pack()
 
 def read_CSV(File):
 	with open(File, 'r') as file:
-    	csv_file = csv.DictReader(file)
-    	for row in csv_file:
-        	print(dict(row))
+		csv_file = csv.DictReader(file)
+	for row in csv_file:
+		print(dict(row))
 
 def open_file(filename):
 	if userPlatform == "Windows":
